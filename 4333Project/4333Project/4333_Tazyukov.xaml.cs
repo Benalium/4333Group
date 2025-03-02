@@ -36,17 +36,11 @@ namespace _4333Project {
 
             // Opening the connection
             var connection = new SqlConnection(DBInteractor.connectionString);
-            
+
             using (connection) {
                 connection.Open();
-                
-                new Instruction {
-                    Callable = DBInteractor.InitCommand,
-                    args = new object[] {
-                        "INSERT INTO user VALUES (1, 2, 3, 4, 5)",
-                        connection
-                    }
-                }.Execute();
+                var command = new SqlCommand("INSERT INTO user VALUES (1, 2, 3, 4, 5)", connection);
+                ContextExecutor.ExecuteInUsingContext(command, () => command.ExecuteNonQuery());
             };
         }
     }

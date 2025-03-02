@@ -28,13 +28,6 @@ namespace _4333Project
             }
         }
 
-        public static Action<string, SqlConnection> InitCommand = (commandString, connection) => {
-            var command = new SqlCommand(commandString, connection);
-            using(command) {
-                command.ExecuteNonQuery();
-            }
-        };
-
         public static string connectionString = "Server=(localdb);Database=test_DB;Trusted_Connection=True;";
     }
 }
