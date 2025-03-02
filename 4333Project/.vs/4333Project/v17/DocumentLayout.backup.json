@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\dbinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|c:\\users\\maxim\\source\\repos\\4333group\\4333project\\4333project\\instruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\instruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333project\\4333_tazyukov.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\4333_tazyukov.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333project\\excelreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\excelreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333project\\4333_tazyukov.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\4333_tazyukov.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|c:\\users\\maxim\\source\\repos\\4333group\\4333project\\4333project\\instruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\instruction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333project\\excelreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|solutionrelative:4333project\\excelreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C1E3715-3BCE-4907-9DCD-06782ECC55D9}|4333Project\\4333Project.csproj|C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -82,16 +82,16 @@
               "Title": "DBInteractor.cs",
               "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\DBInteractor.cs",
               "RelativeDocumentMoniker": "4333Project\\DBInteractor.cs",
-              "ToolTip": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\DBInteractor.cs*",
-              "RelativeToolTip": "4333Project\\DBInteractor.cs*",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwB8AAABEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\DBInteractor.cs",
+              "RelativeToolTip": "4333Project\\DBInteractor.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T11:14:46.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Instruction.cs",
               "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\Instruction.cs",
               "RelativeDocumentMoniker": "4333Project\\Instruction.cs",
@@ -104,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ExcelReader.cs",
               "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\ExcelReader.cs",
               "RelativeDocumentMoniker": "4333Project\\ExcelReader.cs",
@@ -116,13 +116,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "4333_Tazyukov.xaml.cs",
               "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\4333_Tazyukov.xaml.cs",
               "RelativeDocumentMoniker": "4333Project\\4333_Tazyukov.xaml.cs",
               "ToolTip": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\4333_Tazyukov.xaml.cs",
               "RelativeToolTip": "4333Project\\4333_Tazyukov.xaml.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA1wC4AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAA1wCkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T10:24:25.68Z",
               "EditorCaption": ""
@@ -153,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "4333_Tazyukov.xaml",
               "DocumentMoniker": "C:\\Users\\maxim\\source\\repos\\4333Group\\4333Project\\4333Project\\4333_Tazyukov.xaml",
               "RelativeDocumentMoniker": "4333Project\\4333_Tazyukov.xaml",
