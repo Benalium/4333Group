@@ -10,8 +10,8 @@ namespace _4333Project
         public static void Copy(
             string[,] list, 
             SqlConnection sqlConnection, 
-            string stringCommand = "INSERT INTO user (role, name, login, password) VALUES (@role, @name, @login, @password)")
-        {
+            string stringCommand = "INSERT INTO user (role, name, login, password) VALUES (@role, @name, @login, @password)"
+        ) {
             for (int i = 0; i < list.GetLength(0); i++)
             {
                 int j = 0;
@@ -28,6 +28,15 @@ namespace _4333Project
             }
         }
 
-        public static string connectionString = "Server=(localdb);Database=test_DB;Trusted_Connection=True;";
+        public static Action<SqlConnection, Action> DoSmthDuringConnection = (connection, action) => {
+            connection.Open();
+            action();
+            connection.Close();
+        };
+
+
+
+
+        public static string connectionString = "Server=localhost\\MSSQLSERVER01;Database=test_DB;Trusted_Connection=True;";
     }
 }

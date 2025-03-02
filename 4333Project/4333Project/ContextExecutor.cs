@@ -8,10 +8,10 @@ namespace _4333Project
 {
     public static class ContextExecutor
     {
-        public static void ExecuteInUsingContext (IDisposable disposable, Action contextProcedure) {
+        public static Action <IDisposable, Action> ExecuteInUsingContext = (IDisposable disposable, Action contextProcedure) => {
             using(disposable) {
                contextProcedure();
             }
-        }
+        };
     }
 }

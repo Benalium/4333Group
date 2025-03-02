@@ -11,7 +11,7 @@ namespace _4333Project
 {
     public static class ExcelReader
     {
-        public static string [,] Read(string fileName) {
+        public static string [,] ExcelData(string fileName) {
             Excel.Application ObjWorkExcel = new Excel.Application();
             Excel.Workbook ObjWorkBook = ObjWorkExcel.Workbooks.Open(fileName);
             Excel.Worksheet ObjWorkSheet = (Excel.Worksheet)ObjWorkBook.Sheets[1];

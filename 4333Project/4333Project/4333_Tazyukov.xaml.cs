@@ -32,16 +32,19 @@ namespace _4333Project {
                 Title = "Выберите файл базы данных"
             };
             openFileDialog.ShowDialog(); // implicitly changes `FileName` property of the openFileDialog object
-            var data = ExcelReader.Read(openFileDialog.FileName);
+            var data = ExcelReader.ExcelData(openFileDialog.FileName);
 
             // Opening the connection
-            var connection = new SqlConnection(DBInteractor.connectionString);
-
-            using (connection) {
-                connection.Open();
-                var command = new SqlCommand("INSERT INTO user VALUES (1, 2, 3, 4, 5)", connection);
-                ContextExecutor.ExecuteInUsingContext(command, () => command.ExecuteNonQuery());
-            };
+            using(var connection = new SqlConnection(DBInteractor.connectionString)) {
+                DBInteractor.DoSmthDuringConnection(
+                    connection,
+                    () => {
+                        using (var command = new SqlCommand("INSERT INTO [user] VALUES (2, 3, 4, 5)", connection)) {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                );
+            }
         }
     }
 }
