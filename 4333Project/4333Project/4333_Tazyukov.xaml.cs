@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace _4333Project {
     /// <summary>
@@ -32,18 +33,19 @@ namespace _4333Project {
                 Title = "Выберите файл базы данных"
             };
             openFileDialog.ShowDialog(); // implicitly changes `FileName` property of the openFileDialog object
-            var data = ExcelReader.ExcelData(openFileDialog.FileName);
+            var app = new Excel.Application();
+            var workbook = app.Workbooks.Open(openFileDialog.FileName);
+            var sheet = (Excel.Worksheet)workbook.Sheets[1];
+            var data = ExcelReader.ExcelData(sheet);
+            workbook.Close(false, Type.Missing, Type.Missing);
+            app.Quit();
+            var commandText = "INSERT INTO [user] VALUES (2, 3, 4, 5)";
+
+            User[] users = new User[5];
 
             // Opening the connection
             using(var connection = new SqlConnection(DBInteractor.connectionString)) {
-                DBInteractor.DoSmthDuringConnection(
-                    connection,
-                    () => {
-                        using (var command = new SqlCommand("INSERT INTO [user] VALUES (2, 3, 4, 5)", connection)) {
-                            command.ExecuteNonQuery();
-                        }
-                    }
-                );
+                DBInteractor.OpenConnectionAndGoAcrossUsers(connection, users, commandText, DBInteractor.ExecuteUsingCommand);
             }
         }
     }
