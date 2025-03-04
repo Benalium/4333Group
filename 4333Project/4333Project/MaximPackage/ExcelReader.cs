@@ -8,16 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace _4333Project
-{
-    public static class ExcelReader
-    {
+namespace _4333Project {
+    public static class ExcelReader {
         public static string [,] ExcelData(Worksheet sheet) {
             var lastCell = sheet.Cells.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
-            string[,] mash = new string[lastCell.Row, lastCell.Column];
-            for (int i = 0; i < lastCell.Row; i++) for (int j = 0; j < lastCell.Column; j++) {
-                mash[i, j] = sheet.Cells[i + 1, j + 1].Text;
-            }
+            var mash = new string[lastCell.Row, lastCell.Column];
+            for(int i = 1; i <= lastCell.Row; i++) for(int j = 0; j <= lastCell.Column; j++) mash[i, j] = sheet.Cells[i, j].Text; // The first row is used for headings, thus i = 1 in the first loop.
             return mash;
         }
     }

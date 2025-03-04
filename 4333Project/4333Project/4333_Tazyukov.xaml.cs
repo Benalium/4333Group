@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Interop.Excel;
+﻿using _4333Project.MaximPackage;
+using Microsoft.Office.Interop.Excel;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Excel = Microsoft.Office.Interop.Excel;
 
 namespace _4333Project {
     /// <summary>
@@ -26,24 +26,7 @@ namespace _4333Project {
         }
 
         private void ButtonImport_Click(object sender, RoutedEventArgs e) {
-            // Getting data from Excel
-            OpenFileDialog openFileDialog = new OpenFileDialog() {
-                DefaultExt = "*.xls;*.xlsx",
-                Filter = "файл Excel (Spisok.xlsx)|*.xlsx",
-                Title = "Выберите файл базы данных"
-            };
-            openFileDialog.ShowDialog(); // implicitly changes `FileName` property of the openFileDialog object
-            var app = new Excel.Application();
-            var workbook = app.Workbooks.Open(openFileDialog.FileName);
-            var sheet = (Excel.Worksheet)workbook.Sheets[1];
-            var data = ExcelReader.ExcelData(sheet);
-            workbook.Close(false, Type.Missing, Type.Missing);
-            app.Quit();
-
-            User[] users = new User[5];
-
-            // Opening the connection
-            DBInteractor.OpenConnection(users, DBInteractor.AddUser);
+            Main.Import(DBInteractor.AddUser);
         }
     }
 }

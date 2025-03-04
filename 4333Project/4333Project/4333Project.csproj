@@ -55,7 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MaximPackage\Instruction.cs" />
+    <Compile Include="MaximPackage\Convertor.cs" />
+    <Compile Include="MaximPackage\Main.cs" />
     <Compile Include="MaximPackage\User.cs" />
     <Page Include="4333_Loginov.xaml">
       <SubType>Designer</SubType>
