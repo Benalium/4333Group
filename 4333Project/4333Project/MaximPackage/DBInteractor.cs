@@ -25,17 +25,16 @@ namespace _4333Project
             }
         }
 
-        public static Action<SqlConnection, User[], string, Action<string, SqlConnection, User, Delegate>> OpenConnectionAndGoAcrossUsers = (
+        public static Action<SqlConnection, User[], string, dynamic> OpenConnectionAndGoAcrossUsers = (
             connection, users, commandText, ForEveryUserAction
         ) => {
-            // possibly some functions
             connection.Open();
             foreach(User user in users) {
                 ForEveryUserAction(commandText, connection, user, AddParametersAndExecute);
             }
         };
 
-        public static Action<string, SqlConnection, User, Action<SqlCommand, User>> ExecuteUsingCommand = (
+        public static Action<string, SqlConnection, User, dynamic> ExecuteUsingCommand = (
             commandText, connection, user, ExecuteWhileCommandExist
         ) => {
             using(var command = new SqlCommand(commandText, connection)) {
@@ -44,10 +43,10 @@ namespace _4333Project
         };
 
         public static Action<SqlCommand, User> AddParametersAndExecute = (command, user) => {
-            command.Parameters.AddWithValue("@role", user.Role);
-            command.Parameters.AddWithValue("@name", user.Name);
-            command.Parameters.AddWithValue("@login", user.Login);
-            command.Parameters.AddWithValue("@password", user.Password);
+            //command.Parameters.AddWithValue("@role", user.Role);
+            //command.Parameters.AddWithValue("@name", user.Name);
+            //command.Parameters.AddWithValue("@login", user.Login);
+            //command.Parameters.AddWithValue("@password", user.Password);
             command.ExecuteNonQuery();
         };
 
