@@ -39,14 +39,11 @@ namespace _4333Project {
             var data = ExcelReader.ExcelData(sheet);
             workbook.Close(false, Type.Missing, Type.Missing);
             app.Quit();
-            var commandText = "INSERT INTO [user] VALUES (2, 3, 4, 5)";
 
             User[] users = new User[5];
 
             // Opening the connection
-            using(var connection = new SqlConnection(DBInteractor.connectionString)) {
-                DBInteractor.OpenConnectionAndGoAcrossUsers(connection, users, commandText, DBInteractor.ExecuteUsingCommand);
-            }
+            DBInteractor.OpenConnection(users, DBInteractor.AddUser);
         }
     }
 }

@@ -25,31 +25,25 @@ namespace _4333Project
             }
         }
 
-        public static Action<SqlConnection, User[], string, dynamic> OpenConnectionAndGoAcrossUsers = (
-            connection, users, commandText, ForEveryUserAction
-        ) => {
-            connection.Open();
-            foreach(User user in users) {
-                ForEveryUserAction(commandText, connection, user, AddParametersAndExecute);
-            }
-        };
-
-        public static Action<string, SqlConnection, User, dynamic> ExecuteUsingCommand = (
-            commandText, connection, user, ExecuteWhileCommandExist
-        ) => {
+        public static Action<SqlConnection, User, string> AddUser = (connection, user, commandText) => {
             using(var command = new SqlCommand(commandText, connection)) {
-                ExecuteWhileCommandExist(command, user);
+                //command.Parameters.AddWithValue("@role", user.Role);
+                //command.Parameters.AddWithValue("@name", user.Name);
+                //command.Parameters.AddWithValue("@login", user.Login);
+                //command.Parameters.AddWithValue("@password", user.Password);
+                command.ExecuteNonQuery();
             }
         };
 
-        public static Action<SqlCommand, User> AddParametersAndExecute = (command, user) => {
-            //command.Parameters.AddWithValue("@role", user.Role);
-            //command.Parameters.AddWithValue("@name", user.Name);
-            //command.Parameters.AddWithValue("@login", user.Login);
-            //command.Parameters.AddWithValue("@password", user.Password);
-            command.ExecuteNonQuery();
+        public static Action<User[], Action<SqlConnection, User, string>> OpenConnection = (users, ExecuteCommand) => {
+            var commandText = "INSERT INTO [user] VALUES (2, 3, 4, 5)";
+            using(var connection = new SqlConnection(DBInteractor.connectionString)) {
+                connection.Open();
+                foreach(User user in users) {
+                    ExecuteCommand(connection, user, commandText);
+                }
+            }
         };
-
 
         public static string connectionString = "Server=localhost\\MSSQLSERVER01;Database=test_DB;Trusted_Connection=True;";
     }
