@@ -20,11 +20,18 @@
                    Text="Максим, 19" 
                    FontSize="15" />
         <StackPanel Orientation="Horizontal">
-            <Button Content="Import data" 
+            <Button Content="Import Excel" 
                     Margin="0 0 0 0"
-                    Click="ButtonImport_Click" />
-            <Button Content="Export data" 
-                    Margin="16 0 0 0" />
+                    Click="ButtonImportExcel_Click" />
+            <Button Content="Export Excel" 
+                    Margin="16 0 0 0" 
+                    Click="ButtonExportExcel_Click"/>
+            <Button Content="Import JSON" 
+                    Margin="16 0 0 0" 
+                    Click="ButtonImportJson_Click"/>
+            <Button Content="Export JSON" 
+                    Margin="16 0 0 0" 
+                    Click="ButtonExportJson_Click"/>
         </StackPanel>
         
     </Grid>

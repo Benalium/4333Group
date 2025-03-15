@@ -1,0 +1,72 @@
+[
+  {
+    "Id": 1,
+    "Position": "Администратор",
+    "FullName": "Федоров Глеб Михайлович",
+    "Log": "o@outlook.com",
+    "Password": "2L6KZG"
+  },
+  {
+    "Id": 2,
+    "Position": "Администратор",
+    "FullName": "Семенова Софья Дмитриевна",
+    "Log": "hr6zdl@yandex.ru",
+    "Password": "uzWC67"
+  },
+  {
+    "Id": 3,
+    "Position": "Администратор",
+    "FullName": "Васильев Егор Германович",
+    "Log": "kaft93x@outlook.com",
+    "Password": "8ntwUp"
+  },
+  {
+    "Id": 4,
+    "Position": "Менеджер",
+    "FullName": "Смирнова Ирина Александровна",
+    "Log": "dcu@yandex.ru",
+    "Password": "YOyhfR"
+  },
+  {
+    "Id": 5,
+    "Position": "Менеджер",
+    "FullName": "Петров Андрей Владимирович",
+    "Log": "19dn@outlook.com",
+    "Password": "RSbvHv"
+  },
+  {
+    "Id": 6,
+    "Position": "Менеджер",
+    "FullName": "Егоров Максим Андреевич",
+    "Log": "pa5h@mail.ru",
+    "Password": "rwVDh9"
+  },
+  {
+    "Id": 7,
+    "Position": "Клиент",
+    "FullName": "Никитин Артур Алексеевич",
+    "Log": "281av0@gmail.com",
+    "Password": "LdNyos"
+  },
+  {
+    "Id": 8,
+    "Position": "Клиент",
+    "FullName": "Киселев Максим Сергеевич",
+    "Log": "8edmfh@outlook.com",
+    "Password": "gynQMT"
+  },
+  {
+    "Id": 9,
+    "Position": "Клиент",
+    "FullName": "Борисов Тимур Егорович",
+    "Log": "sfn13i@mail.ru",
+    "Password": "AtnDjr"
+  },
+  {
+    "Id": 10,
+    "Position": "Клиент",
+    "FullName": "Климов Арсений Тимурович",
+    "Log": "g0orc3x1@outlook.com",
+    "Password": "JlFRCZ"
+  }
+]
